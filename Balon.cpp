@@ -1,6 +1,12 @@
 #include "Balon.h"
-#include <iostream>
 
-void Balon::inflar(float psi) { presionAire = psi; }
-void Balon::asignarDeporte(std::string dep) { deporte = dep; }
-bool Balon::chequearDesgaste() { return false; }
+Balon::Balon(int id, string n, string dep, string m) : Articulo() {
+    this->setIdArticulo(id);
+    this->setNombre(n);
+    this->deporte = dep;
+    this->marca = m;
+}
+
+string Balon::obtenerInfo() {
+    return "Balon: " + this->getNombre() + " | Deporte: " + deporte;
+}
