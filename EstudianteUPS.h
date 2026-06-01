@@ -5,12 +5,14 @@
 class EstudianteUPS {
 public:
     int idEstudiante;
-    std::string nombre;
-    std::string cedula;
-    std::string email;
+    std::string nombre, email, telefono, carrera, cedula, foto, ciudad;
     int edad;
-    std::string ciudad;
-    std::string telefono;
-    std::string foto;
+
+    void registrarse();
+    void ingresar();
+    int solicitarPrestamo();
+    void devolverArticulo();
+    void actualizarDatos();
+    void imprimir();
 };
 #endif
